@@ -3,10 +3,10 @@ Param(
 )
 
 If(-not(Test-Path C:\temp)){
-    New-Item -Path "c:\" -Name "temp" -ItemType "directory"
+    New-Item -Path "c:\" -Name "temp" -ItemType "directory" | Out-Null
 }
-Start-Transcript C:\temp\log.txt
+Start-Transcript C:\temp\log.txt | Out-Null
 
 Write-Host $Token
 
-Stop-Transcript
+Stop-Transcript | Out-Null
